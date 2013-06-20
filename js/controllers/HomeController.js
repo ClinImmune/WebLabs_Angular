@@ -1,0 +1,1 @@
+clinImmuneApp.controller('HomeController', function($scope){});

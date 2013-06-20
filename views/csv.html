@@ -1,0 +1,39 @@
+<input type="file" id="input"/>
+<p>
+    asdf
+</p>
+
+<script>
+    var fileDrop = document.getElementById('input').files[0];
+    
+    fileDrop.addEventListener("dragenter", dragEnter, false);
+    fileDrop.addEventListener("dragover", dragOver, false);
+    fileDrop.addEventListener("drop", drop, false);
+    //fileDrop.addEventListener("click", click, false);
+    function dragEnter(e) {
+        e.stopPropagation();
+        e.preventDefault();
+    }
+    function dragOver(e) {
+        e.stopPropagation();
+        e.preventDefault();
+    }
+    function drop(e) {
+        e.stopPropagation();
+        e.preventDefault();
+        
+        var dt = e.dataTransfer;
+        var files = dt.files;
+        
+        handleFiles(files);
+    }
+    function handleFiles(files) {
+        for (var i = 0; i < files.length; i++) {
+            var file = files[i];
+            var list = document.createElement("ul");
+            var line = document.createElement("li");
+     
+            
+        }
+    }
+</script>
